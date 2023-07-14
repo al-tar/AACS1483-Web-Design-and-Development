@@ -7,7 +7,7 @@ async function runTest() {
   const page = await context.newPage();
 
   // Load the HTML file
-  await page.goto('mp_events.html');
+  await page.goto('http://127.0.0.1:8080/Data File/review/mp_events.html');
 
   // Verify the page title
   const pageTitle = await page.title();
