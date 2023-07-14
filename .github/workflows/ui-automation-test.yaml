@@ -16,13 +16,15 @@ jobs:
           node-version: 14
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          cd Data File/review
+          npm install
 
       - name: Start Live Server
-        run: npx live-server --port=8080 --entry-file=Data File/review/mp_events.html
+        run: npx live-server --port=8080 --entry-file=Data%20File/review/mp_events.html
 
       - name: Wait for server to start
         run: sleep 5
 
       - name: Run tests
-        run: node Data File/review/test.js
+        run: node Data%20File/review/test.js
